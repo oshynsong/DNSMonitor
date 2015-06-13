@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="实时显示DNS查询数据的变化情况，监控网络情况">
+    <meta name="keywords" content="DNS查询，监控，可视化">
+    <meta name="author" content="OshynSong">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+	
+	<title>DNS Monitor</title>
+	<link href="public/css/main.css" rel="stylesheet"/>
+	<link href="public/css/button.css" rel="stylesheet"/>
+	
+	<script type="text/javascript" src="public/js/jquery-2.0.0.min.js"></script>
+	<script src="public/js/d3.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+	<table id="main">
+	  <tr>
+		<td class="left-side" style="height:310px;">
+		<header>
+			<hgroup>
+			  <h1>DNS Monitor</h1>
+			  <h2>实时显示DNS查询数据的变化情况，监控网络情况</h2>
+			</hgroup>       
+			<span id='start' class="button-wrap  button-download">
+				<a class="button button-circle  button-flat  glow" title="开始实时显示" href="javascript:void(0)">开始</a>
+			</span>
+			<span id="end" class="button-wrap button-download" style="margin-left: 180px;">
+				<a class="button button-circle button-flat button-flat-primary glow" href="javascript:void(0)" title="暂停实时显示" >暂停</a>
+			</span>
+			<span id="freq" class="button-wrap button-download" style="margin-left: 360px;">
+				<a class="button button-circle button-flat button-flat-action glow" href="javascript:void(0)" title="查看频繁路径" >频繁路径</a>
+			</span>
+		</header>
+		</td>
+		<td rowspan="2" class="right-side">
+			<div id="map">
+			</div>
+		</td>
+	  </tr>
+	  <tr><td class="left-side left-side-down">
+		<h3>实时数据</h3>
+		<div id="infoBox">
+			<!--div class="line">123.34.33.22:{"addr":"北京市高刚刚","x":453.1221111, "y":7372.11111}</div-->
+		</div>
+	  </td></tr>
+	</table>	
+	<script type="text/javascript" src="public/js/d3-ForceEdgeBundling.js"></script>
+	<script type="text/javascript" src="public/js/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="public/js/main.js"></script>
+  </body>
+</html>
